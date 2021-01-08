@@ -3,5 +3,6 @@ import consumer from "./consumer"
 
 consumer.subscriptions.create("FeedChannel", {
   received(data) {
-    if (data.cableReady) CableReady.perform(data.operations)}
+    if (data.cableReady) CableReady.perform(data.operations)
+  }
 });

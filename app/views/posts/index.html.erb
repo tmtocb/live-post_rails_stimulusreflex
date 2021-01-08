@@ -3,5 +3,8 @@
   <h4>Learning CableReady &amp; StimulusReflex</h4>
 
   <%= render "form" %>
-  <%= render partial: "post", collection: @posts %>
+
+  <div id="feed">
+    <%= render partial: "post", collection: @posts %>
+  </div>
 </div>

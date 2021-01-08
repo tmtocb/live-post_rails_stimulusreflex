@@ -220,6 +220,7 @@ DEPENDENCIES
   binding_of_caller
   bootsnap (>= 1.4.2)
   byebug
+  cable_ready (~> 4.4)
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (~> 3.2)

@@ -31,3 +31,4 @@ group :test do
 end
 
 gem "stimulus_reflex", "~> 3.4"
+gem "cable_ready", "~> 4.4"

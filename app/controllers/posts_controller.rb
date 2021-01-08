@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  include CableReady::Broadcaster
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -7,13 +7,19 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    post = Post.create(post_params)
+    cable_ready["feed"].insert_adjacent_html(
+      selector: "#feed",
+      position: "afterbegin",
+      html: render_to_string(partial: "post", locals: {post: post})
+    )
+    cable_ready.broadcast
     redirect_to posts_path
   end
 
   private
 
-    def post_params
-      params.require(:post).permit(:body)
-    end
+  def post_params
+    params.require(:post).permit(:body)
+  end
 end
