@@ -3,21 +3,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
+    @post = Post.new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
     redirect_to posts_path
-
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render :show, status: :created, location: @post }
-      else
-        format.html { render :new }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   private
