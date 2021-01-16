@@ -1,7 +1,31 @@
 .card-body {
   text-align: center;
+  border-color: #f8ad01;
 }
 
 .card-header {
   text-align: center;
+  background-color: #f8ad01;
+  border-color: #fff;
+}
+
+.form-control {
+  text-align: center;
+}
+
+.post-body {
+  background-color: #f8ad01;
+  border-color: #fff;
+  border-radius: 30px;
+}
+
+.btn-create {
+  background-color: #1153ab;
+  color: #fff;
+  border-color: #fff;
+  border-radius: 10px;
+}
+
+.body-blue {
+  background-color: #1153ab;  
 }

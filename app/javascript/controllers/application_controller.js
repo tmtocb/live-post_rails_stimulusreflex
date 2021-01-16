@@ -1,6 +1,8 @@
 import { Controller } from 'stimulus'
 import StimulusReflex from 'stimulus_reflex'
 
+document
+
 /* This is your ApplicationController.
  * All StimulusReflex controllers should inherit from this class.
  *
