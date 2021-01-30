@@ -18,7 +18,7 @@
 * <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> for scripts and Front-End styling.
 * <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> for Front-End styling.
 * **ActionCable** for integration of websockets and stream of channels.
-* **Redis** as a dependency for StimulusReflex.
+* **Redis** as a dependency for StimulusReflex and for Heroku.
 * **StimulusReflex** for reactive real time updates with reflexes by intercepting user interactions and passing them to Rails over real-time websockets that change the application state.
 * **CableReady** to broadcast DOM updates from multiple clients at once using **ActionCable**, notify the users and update the UI, real time updates for posts.
 * **Font-Awesome** as an icon toolkit 
