@@ -3,10 +3,10 @@
 class PostsReflex < ApplicationReflex
   include CableReady::Broadcaster
 
- def repost
+  def repost
     post = Post.find(element.dataset[:id])
     post.increment! :reposts_count
-    cable_ready["feed"].text_content(
+    cable_ready['feed'].text_content(
       selector: "#post-#{post.id}-reposts",
       text: post.reposts_count
     )
@@ -16,7 +16,7 @@ class PostsReflex < ApplicationReflex
   def like
     post = Post.find(element.dataset[:id])
     post.increment! :likes_count
-    cable_ready["feed"].text_content(
+    cable_ready['feed'].text_content(
       selector: "#post-#{post.id}-likes",
       text: post.likes_count
     )
